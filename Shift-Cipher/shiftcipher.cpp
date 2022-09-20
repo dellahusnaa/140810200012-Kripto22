@@ -1,3 +1,8 @@
+/*
+    PROGRAM SHIFT CIPHER
+    Nama    : Della Fauziyyah Husna
+    NPM     : 140810200012
+*/
 
 #include <iostream>
 #include <string.h>
@@ -22,15 +27,15 @@ int main(){
     cin >> pilihan;
     cout << "\n";
     if(pilihan == 1){
-        char ch;
+        char ch; // variable yg akan diisi oleh char sementara
         for(int i = 0; teks[i] != '\0'; ++i){
             ch = teks[i];
             if(ch >= 'a' && ch <= 'z'){
-                ch = ch + kunci;
+                ch = ch + kunci; // char ditambahkan dengan kunci
                 if (ch > 'z') {
-                ch = ch - 'z' + 'a' - 1;
+                ch = ch - 'z' + 'a' - 1; // jika char lebih dari 'z' , maka posisi akan disesuaikan dengan rumus ini
                 }  
-                teks[i] = ch;
+                teks[i] = ch; // variable teks akan diisi dengan char dari ch
             }
             else if(ch >= 'A' && ch <= 'Z'){
                 ch = ch + kunci;
@@ -42,12 +47,12 @@ int main(){
         }
         printf("Hasil Enkripsi: %s", teks);
     }
-    else if(pilihan == 2){
+    if(pilihan == 2){
         char ch;
         for(int i = 0; teks[i] != '\0'; ++i){
             ch = teks[i];
             if(ch >= 'a' && ch <= 'z') {
-                ch = ch - kunci;
+                ch = ch - kunci; // char dikurangi dengan kunci
                 if(ch < 'a'){
                 ch = ch + 'z' - 'a' + 1;
                 }
